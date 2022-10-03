@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+         $("button").click(function()
+         {
+          $("#head").hide();
+         });
+         $("p,h2").css({"color":"red","background-color":"black","font-size":"30px"});
+        });
+    </script>
+</head>
+<body>
+    <p>I am a Full Stack Web Developer</p>
+    <p class="head">cascading style sheet</p>
+    <h2>Aditi Hele</h2>
+    <h2>Information Technology</h2>
+    <button>hide</button>
+</body>
+</html>

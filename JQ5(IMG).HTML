@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQUERY</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function ()
+      {
+        $("#change").click(function()
+         {
+          $("#img1").attr("src","/biggboss.jpg")
+         });
+        $("#hide").click(function()
+        {
+          $("#img1").hide();
+        })
+        $("#show").click(function()
+        {
+          $("#img1").show();
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <img src="/mansarovar.jpeg" alt="" id="img1"/><br>
+    <button id="change">Change</button>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+  </body>
+</html>

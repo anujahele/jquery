@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+       $(document).ready(function()
+       {
+var srnumber=0;
+$('.sr-no').each(function(index){
+    srnumber+=1;
+    $(this).text(srnumber)
+})
+        $(".btn-add").click(function(){
+       $(".btnsavedata").fadeIn();
+       $(".btnupdatesave").fadeOut();
+
+            $("#myModal").modal('show')
+        })
+        $(".btnsavedata").click(function(){
+            srnumber=0;
+let fname=$("#fname").val();
+let lastname=$("#lsm").val();
+let mobileno=$("#mobile-no").val();
+let address=$("#address").val();
+$("#studenttbl").append("<tr><td><span class='sr-no'></span><td>"+fname+"</td><td>"+lastname+"</td><td>"+mobileno+"</td><td>"+address+"</td><td><button class='btn btn-warning btnedit'>Edit</button><button class='btn btn-danger btndelete'>Delete</button></td></tr>")
+$('.sr-no').each(function(index){
+    srnumber+=1;
+    $(this).text(srnumber)
+})     
+})
+       })
+    </script>
+  </head>
+  <body>
+    <div class="container">
+    <h2>Student Table</h2>
+    <p>The .table-bordered class adds borders to a table:</p>            
+    <table class="table table-bordered" id="studenttbl">
+      <thead>
+        <tr>
+            <th>sr-no</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>mobile no</th>
+          <th>address</th>
+          <th>Action <a href="javascript:void(0)" class="btn-add">
+            <span class="glyphicon glyphicon-plus"></span>
+          </a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="sr-no"></span></td>
+          <td>John</td>
+          <td>Doe</td>
+          <td>451236</td>
+          <td>kathora naka</td>
+          <!-- <td><button id="edit">EDIT</button> <button id="delete">DELETE</button></td> -->
+        </tr>
+        </tr>
+        <tr>
+            <td><span class="sr-no"></span></td>
+          <td>Mary</td>
+          <td>Moe</td>
+          <td>478596</td>
+          <td>shegao naka</td>
+        </tr>
+        <tr>
+            <td><span class="sr-no"></span></td>
+          <td>July</td>
+          <td>Dooley</td>
+          <td>215463</td>
+          <td>gadge nagar</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Student Model</h4>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="fname">First Name:</label>
+                  <input type="text" class="form-control" id="fname">
+                </div>
+                <div class="form-group">
+                  <label for="lsm">Last Name :</label>
+                  <input type="text" class="form-control" id="lsm">
+                </div>
+                <div class="form-group">
+                    <label for="mobile-no">Mobile-No :</label>
+                    <input type="text" class="form-control" id="mobile-no">
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea class="form-control" rows="5" id="address"></textarea>
+                  </div>
+                  <button type="button" class="btn btn-info btnsavedata">Save</button>
+                  <button type="button" class="btn btn-info btnupdatesave">Update</button>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</body>
+</html

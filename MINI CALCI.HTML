@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(Document).ready(function()
+      {
+       $("#btnAdd").on('click',function()
+       {
+        Add();
+       });
+       $("#btnSubstract").on('click',function()
+       {
+        Substract();
+       });
+       $("#btnMultiply").on('click',function()
+       {
+        Multiply();
+       });
+       $("#btnDivide").on('click',function()
+       {
+        Divide();
+       });
+       $("*").css({"text-align":"center"})
+       $(".count").css({"border":"2px solid black","display":"inline-block","background-color":"gray","font-size":"25px"})
+       $("input").css({"padding":"10px","font-size":"20px"})
+       $("button").css({"padding":"10px","font-size":"20px"})
+      });
+      function Add()
+      {
+        var no1=parseInt($("#fno").val());
+        var no2=parseInt($("#sno").val());
+        var result =no1 + no2;
+        alert("The result is "+result);
+      }
+      function Substract()
+      {
+        var no1=parseInt($("#fno").val());
+        var no2=parseInt($("#sno").val());
+        var result =no1 - no2;
+        alert("The result is "+result);
+      }
+      function Multiply()
+      {
+        var no1=parseInt($("#fno").val());
+        var no2=parseInt($("#sno").val());
+        var result =no1 * no2;
+        alert("The result is "+result);
+      }
+      function Divide()
+      {
+        var no1=parseInt($("#fno").val());
+        var no2=parseInt($("#sno").val());
+        var result =no1 / no2;
+        alert("The result is "+result);
+      }
+      
+    </script>
+</head>
+<body>
+    <div class="count">
+        <lable>First Number :</lable><br>
+        <input type="number" id="fno" placeholder="Enter First Number"><br>
+        <lable>Second Number :</lable><br>
+        <input type="number" id="sno" placeholder="Enter Second Number"><br><br>
+        <button id="btnAdd">Add</button>
+        <button id="btnSubstract">Sub</button>
+        <button id="btnMultiply">Mul</button>
+        <button id="btnDivide">Div</button><br><br>
+        <label>Your Ans :</label><br>
+        <input type="text" id="calci">
+        <p id="calcires"></p>
+    </div>
+</body>
+</html>
